@@ -21,6 +21,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.my.project.paginationmovies.R
 import com.example.my.project.paginationmovies.Utils.BottomNavigationItems
+import com.example.my.project.paginationmovies.ui.AllMovies.AllMovies
 
 @Composable
 fun HomeScreen(navController: NavHostController) {

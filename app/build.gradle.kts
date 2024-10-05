@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-kapt")
+    alias(libs.plugins.composeHilt) apply false
 }
 
 android {
@@ -23,7 +25,10 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
     compileOptions {
@@ -68,4 +73,9 @@ dependencies {
 
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.constraintlayout.compose)
+
+
+    implementation(libs.hilt.android)
+    kapt( libs.hilt.compiler)
+
 }
