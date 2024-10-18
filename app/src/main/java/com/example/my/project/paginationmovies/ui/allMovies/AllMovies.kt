@@ -11,6 +11,7 @@ fun AllMovies(navController: NavHostController) {
     val moviesViewModel: MoviesViewModel = hiltViewModel()
 
     LaunchedEffect(key1 = true) {
+
         Log.d(TAG, "coming: ")
         val size = moviesViewModel.getAllMovies()
         Log.d(TAG, "AllMovies: $size")
