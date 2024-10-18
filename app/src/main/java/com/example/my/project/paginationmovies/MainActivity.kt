@@ -17,12 +17,18 @@ import com.example.my.project.paginationmovies.Utils.NavigationItems
 import com.example.my.project.paginationmovies.screens.HomeScreen
 import com.example.my.project.paginationmovies.screens.SplashScreen
 import com.example.my.project.paginationmovies.ui.theme.PaginationMoviesTheme
+import dagger.hilt.android.AndroidEntryPoint
 
 
 private const val ApiKey = "316b3c13a33e9284cf32bd6272bceb8e"
+private const val URL = "https://api.themoviedb.org/3/movie/550?api_key=316b3c13a33e9284cf32bd6272bceb8e"
+private const val BASEURL = "https://www.themoviedb.org"
 private const val ApiReadAccessToken =
     "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMTZiM2MxM2EzM2U5Mjg0Y2YzMmJkNjI3MmJjZWI4ZSIsIm5iZiI6MTcyNzkzOTM1OS4xNzMyNjEsInN1YiI6IjY2ZmU0MWVkZTg0ZWViMzVhMGY3YzFmMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.6ELNbot0kvujMYNXGCF9TqI2ve3VjU1heV9t-CRbG0w"
 
+
+
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

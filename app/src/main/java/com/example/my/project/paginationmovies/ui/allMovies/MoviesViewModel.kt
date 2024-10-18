@@ -1,4 +1,4 @@
-package com.example.my.project.paginationmovies.ui.AllMovies
+package com.example.my.project.paginationmovies.ui.allMovies
 
 import androidx.lifecycle.ViewModel
 import com.example.my.project.paginationmovies.domain.usecase.GetAllMovies
@@ -11,6 +11,7 @@ class MoviesViewModel @Inject constructor(
 ) : ViewModel() {
 
 
-    private suspend fun getAllMovies() = movies.invoke()
+    suspend fun getAllMovies() = movies.invoke()
 
 }
+

@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("kotlin-kapt")
     alias(libs.plugins.composeHilt) apply false
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -76,6 +77,18 @@ dependencies {
 
 
     implementation(libs.hilt.android)
-    kapt( libs.hilt.compiler)
+    kapt(libs.hilt.compiler)
+    implementation(libs.gson)
+
+    implementation(libs.androidx.hilt.navigation.compose)
+    implementation(libs.androidx.navigation.compose.v282)
+
+
+    // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    //chucker
+    debugImplementation( "com.github.chuckerteam.chucker:library:4.0.0")
+
 
 }
